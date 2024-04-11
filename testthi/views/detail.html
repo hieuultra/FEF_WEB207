@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3 style="text-align: left" class="mt-5 mb-5">
+        THONG TIN CHI TIET SAN PHAM
+      </h3>
+      <form class="add-product-form">
+        <div class="form-group">
+          <label for="ma_sp">MA SAN PHAM:</label>
+          <input
+            type="text"
+            class="form-control"
+            ng-model="inputValue.ma_sp"
+            disabled
+          />
+        </div>
+        <div class="form-group">
+          <label for="ten">TEN SAN PHAM:</label>
+          <input
+            type="text"
+            class="form-control"
+            ng-model="inputValue.ten"
+            disabled
+          />
+        </div>
+        <div class="form-group">
+          <label for="ten">THE LOAI:</label>
+          <select class="form-select" ng-model="inputValue.loai" disabled>
+            <option value="" selected>CHOOSE LOAI</option>
+            <option value="do nam">do nam</option>
+            <option value="do nu">do nu</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ten">GIA SAN PHAM:</label>
+          <input
+            type="number"
+            class="form-control"
+            ng-model="inputValue.gia"
+            disabled
+          />
+        </div>
+        <center>
+          <a href="#!/products/list-product"
+            ><button type="button" class="btn btn-outline-danger mt-3">
+              QUAY LAI
+            </button></a
+          >
+          <a>
+            <button
+              ng-click="onEdit(pro.id)"
+              type="button"
+              class="btn btn-warning mt-3"
+            >
+              CHINH SUA
+            </button>
+          </a>
+        </center>
+      </form>
+    </div>
+  </div>
+</div>

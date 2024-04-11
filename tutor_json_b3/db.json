@@ -1,0 +1,21 @@
+{
+  "products": [
+    {
+      "name": "samsung j6",
+      "price": 2000,
+      "id": "1"
+    },
+    {
+      "name": "smart phone 2",
+      "price": 43244,
+      "id": "2"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "title": "title2",
+      "body": "body2"
+    }
+  ]
+}

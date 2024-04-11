@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 style="text-align: center">THÊM SẢN PHẨM</h2>
+      <form class="add-product-form">
+        <div class="form-group">
+          <label for="ten">Tên:</label>
+          <input
+            type="text"
+            class="form-control"
+            ng-model="inputValue.name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="gia">Giá:</label>
+          <input
+            type="number"
+            class="form-control"
+            ng-model="inputValue.price"
+            required
+          />
+        </div>
+        <center>
+          <button ng-click="onSubmitForm()" class="btn btn-success">
+            Thêm
+          </button>
+        </center>
+      </form>
+    </div>
+  </div>
+</div>

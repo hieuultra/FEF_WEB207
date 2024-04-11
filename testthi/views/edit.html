@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 style="text-align: left" class="mt-5 mb-5">SUA SAN PHAM</h3>
+        <form class="add-product-form">
+          <div class="form-group">
+            <label for="ma_sp">MA SAN PHAM:</label>
+            <input
+              type="text"
+              class="form-control"
+              ng-model="inputValue.ma_sp"
+              required
+            />
+            <span ng-show="check.ma_sp == true" style="color: red"
+              >vui long nhap ma</span
+            >
+          </div>
+          <div class="form-group">
+            <label for="ten">TEN SAN PHAM:</label>
+            <input
+              type="text"
+              class="form-control"
+              ng-model="inputValue.ten"
+              required
+            />
+            <span ng-show="check.ten == true" style="color: red"
+              >vui long nhap ten</span
+            >
+          </div>
+          <div class="form-group">
+            <label for="ten">THE LOAI:</label>
+            <select class="form-select" ng-model="inputValue.loai" required>
+              <option value="" selected>CHOOSE LOAI</option>
+              <option value="do nam">do nam</option>
+              <option value="do nu">do nu</option>
+            </select>
+            <span ng-show="check.loai == true" style="color: red"
+              >vui long chon loai</span
+            >
+          </div>
+          <div class="form-group">
+            <label for="ten">GIA SAN PHAM:</label>
+            <input
+              type="number"
+              class="form-control"
+              ng-model="inputValue.gia"
+              required
+            />
+            <span ng-show="check.gia == true" style="color: red"
+              >vui long nhap gia</span
+            >
+          </div>
+          <center>
+            <button ng-click="editForm()" class="btn btn-success mt-3">CHINH SUA</button>
+          </center>
+        </form>
+      </div>
+    </div>
+  </div>
+  

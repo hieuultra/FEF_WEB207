@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../js/angular.min.js"></script>
+    <!-- <script src="../js/angular.js"></script> -->
+    <script src="../js/angular-route.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <div ng-controller="infoCtrl">
+      <!-- <div> -->
+      <!-- <a href="index.html">HOME</a>
+      <a href="#danh-sach">LIST</a>
+      <a href="#them-moi">ADD</a> -->
+      <h1>{{welcome}}</h1>
+
+      <!-- <div ng-view></div> -->
+
+      <!-- <h2>{{employees.name}}</h2>
+      <h2>{{employees.age}}</h2>
+      <h2>{{employees.job}}</h2>
+      <h2>{{employees.born}}</h2>
+      <h2 ng-if="namHienTai- employees.born > 18">du tuoi di tu</h2>
+      <span ng-switch="employees.born">
+        <span ng-switch-when="2004">du tuoi</span>
+        <span ng-switch-when="2008">chua du tuoi</span>
+      </span> -->
+
+      <h2>INFOR</h2>
+      <table class="table" border="1">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>JOB</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- duyet mang -->
+          <tr ng-repeat="item in ex">
+            <td>{{$index+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.job}}</td>
+            <td>
+              <!-- lay vi tri obj -->
+              <!-- <button ng-click="exam($index)">Exam</button> -->
+              <!-- //hien thi alert -->
+              <button ng-click="exam(item.name)">Exam</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="controller/route.js"></script>
+  </body>
+</html>

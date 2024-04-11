@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo route</title>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/angular-route.js"></script>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="libs/bootstrap/js/bootstrap.bundle.min.js" />
+    <script src="route/route.js"></script>
+    <script src="controller/ListController.js"></script>
+    <script src="controller/AddController.js"></script>
+    <script src="controller/DetailController.js"></script>
+    <script src="controller/EditController.js"></script>
+  </head>
+
+  <body>
+    <div ng-app="appRoute">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="#!/list">list-pro</a></li>
+            <!-- <li><a href="#!/danh-muc">list cat</a></li> -->
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div ng-view=""></div>
+      </main>
+      <!-- <footer>this is a footer</footer> -->
+    </div>
+  </body>
+</html>

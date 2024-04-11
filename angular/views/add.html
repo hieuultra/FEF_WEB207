@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 style="text-align: center">ADD PRO</h2>
+      <form class="add-product-form">
+        <div class="form-group">
+          <label for="ten">Tên:</label>
+          <input
+            type="text"
+            class="form-control"
+            ng-model="inputValue.name"
+            required
+          />
+          <span ng-show="kiemTraDuLieu.name == true" style="color: red"
+            >VUI LONG NHAP TEN</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="gia">MO TA:</label>
+          <textarea
+            cols="170"
+            rows="1"
+            ng-model="inputValue.description"
+            required
+          >
+          </textarea>
+          <br>
+          <span ng-show="kiemTraDuLieu.description == true" style="color: red"
+            >VUI LONG Nhap MOTA</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="gia">Giá:</label>
+          <input
+            type="number"
+            class="form-control"
+            ng-model="inputValue.price"
+            required
+          />
+          <span ng-show="kiemTraDuLieu.price == true" style="color: red"
+            >VUI LONG NHAP GIA</span
+          >
+        </div>
+        <center>
+          <button ng-click="onSubmitForm()" class="btn btn-success">
+            Thêm
+          </button>
+        </center>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
++ scope: dung de lien ket data tu controller va html 
+dong vai tro trung gian giua ctl va view 
+luu tru , quan ky cac bien va edit gia tri 
++ module: 1 dang container cho cac thanh phan khac nhau 
++ controller: 1 object js, quan ly cac tac vu cua ung dung
+ket noi vs view va xu ly event tu phia nguoi dung 
++ data binding : ket noi giua cac thanh phan khac nhau cua ung dung 
+dong bo du lieu va cac trang thai voi nhau 
+dong bo hoa giua controller va view
++ model:  cung cap phuong thuc truy cap, 
+ket noi vs cac API 
+lay data tu server 

@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 style="text-align: center">LIST PRO</h1>
+      <div class="text-right add-button">
+        <a href="#!/add" class="btn btn-success" role="button">ADD</a>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="pr in products">
+            <td>{{$index+1}}</td>
+            <td>{{pr.name}}</td>
+            <td>{{pr.description}}</td>
+            <td>{{pr.price}}</td>
+            <td>
+              <div class="actions">
+                <button ng-click="onDetail(pr.id)" class="btn btn-success">
+                  Detail
+                </button>
+                <button ng-click="onDelete(pr.id)" class="btn btn-danger">
+                  Xóa
+                </button>
+                <button
+                  ng-click="onEdit(pr.id)"
+                  type="button"
+                  class="btn btn-warning"
+                >
+                  Sửa
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

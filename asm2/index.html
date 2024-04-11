@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asm2</title>
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/angular-route.min.js"></script>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css"
+      rel="stylesheet"
+    />
+    <link href="/asm2/libs/bootstrap/css/styles.css" rel="stylesheet" />
+    <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./libs/bootstrap/css/asm.css" />
+    <!-- controller -->
+    <script src="controllers/listCatController.js"></script>
+    <script src="controllers/addCatController.js"></script>
+    <script src="controllers/editCatController.js"></script>
+    <script src="controllers/listProController.js"></script>
+    <script src="controllers/addProController.js"></script>
+    <script src="controllers/editProController.js"></script>
+  </head>
+  <body>
+    <div ng-app="app-route">
+      <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#!/cat/listCat">ADMIN</a>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <!-- định nghĩa vị trí mà nội dung sẽ render ra -->
+        <div ng-view></div>
+      </main>
+    </div>
+    <script type="text/javascript">
+      angular
+        .module("app-route", ["ngRoute"])
+        .config(function ($routeProvider) {
+          $routeProvider
+            .when("/cat/listCat", {
+              templateUrl: "views/cat/listCat.html",
+              controller: listCatController,
+            })
+            .when("/cat/addCat", {
+              templateUrl: "views/cat/addCat.html",
+              controller: addCatController,
+            })
+            .when("/cat/:id/edit", {
+              templateUrl: "views/cat/editCat.html",
+              controller: editCatController,
+            })
+            .when("/pro/listPro", {
+              templateUrl: "views/product/listPro.html",
+              controller: listProController,
+            })
+            .when("/pro/addPro", {
+              templateUrl: "views/product/addPro.html",
+              controller: addProController,
+            })
+            .when("/pro/:id/edit", {
+              templateUrl: "views/product/editPro.html",
+              controller: editProController,
+            });
+        });
+    </script>
+    <!-- Js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./libs/js/scripts.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./libs/js/datatables-simple-demo.js"></script>
+  </body>
+</html>

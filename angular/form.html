@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../js/angular.min.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <div ng-controller="myCtrl">
+      <form>
+        <!-- <label>Test ng-model</label> <br /> -->
+        <!-- ng-model dung de buoc du lieu 2 chieu cua $scope vao cac control
+        cua form nhu: input, select, texttarea -->
+        <!-- <input type="text" ng-model="test" />
+        <h1>da nhan: {{test}}</h1> -->
+
+        <!-- radio -->
+        <!-- <h1>SEX</h1>
+        <input type="radio" ng-model="sex" value="MAN" />MAN <br />
+        <input type="radio" ng-model="sex" value="GIRL" /> GIRL <br />
+        <button ng-click="submit()">EXAM</button> -->
+
+        <!-- checkbox -->
+        <!-- <h1>LIST STUDENT FAILED</h1>
+        <input type="checkbox" ng-model="input.list.ALL" />ALL <br /> -->
+        <!-- sd ng-checked de kiem soat trang thai cua
+         cac checkbox khac dua tren checkbox ALL -->
+        <!-- <input
+          type="checkbox"
+          ng-model="input.list.A"
+          ng-checked="input.list.ALL"
+        />
+        le van duong
+        <br />
+        <input
+          type="checkbox"
+          ng-model="input.list.B"
+          ng-checked="input.list.ALL"
+        />
+        tran minh son
+        <br />
+        <input
+          type="checkbox"
+          ng-model="input.list.C"
+          ng-checked="input.list.ALL"
+        />
+        ha dang diep
+        <br />
+        <button ng-click="submit()">EXAM</button> -->
+
+        <!-- select-option -->
+        <h1>CATS</h1>
+        <!-- ng-options -->
+        <!-- <select
+          ng-model="selectItem"
+          ng-options="item.name for item in cat"
+        ></select> -->
+        <!-- ng-repeat -->
+        <select ng-model="selectItem">
+          <option ng-repeat="item in cat" value="{{item.name}}">
+            {{item.name}}
+          </option>
+        </select>
+        <button ng-click="submit()">EXAM</button>
+      </form>
+    </div>
+
+    <script src="controller/form.js"></script>
+  </body>
+</html>

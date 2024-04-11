@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": "3027",
+      "ma_sp": "BA01",
+      "ten": "BAG1",
+      "loai": "do nam",
+      "gia": 9000
+    },
+    {
+      "ma_sp": "BA02",
+      "ten": "bag2",
+      "loai": "do nam",
+      "gia": 8999,
+      "id": "4743"
+    },
+    {
+      "id": "eaf5",
+      "ma_sp": "SH09",
+      "ten": "SHOE09",
+      "loai": "do nam",
+      "gia": 6900
+    },
+    {
+      "ma_sp": "BA08",
+      "ten": "BAG08",
+      "loai": "do nu",
+      "gia": 2998,
+      "id": "d5ea"
+    },
+    {
+      "id": "9355",
+      "ma_sp": "HA01",
+      "ten": "HAT01",
+      "loai": "do nam",
+      "gia": 101
+    }
+  ]
+}

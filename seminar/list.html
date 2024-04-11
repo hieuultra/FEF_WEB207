@@ -1,0 +1,21 @@
+<h2>INFOR</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>NAME</th>
+      <th>AGE</th>
+      <th>JOB</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in ex">
+      <td>{{item.name}}</td>
+      <td>{{item.age}}</td>
+      <td>{{item.job}}</td>
+      <td>
+        <button ng-click="exam(item.name)">Exam</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

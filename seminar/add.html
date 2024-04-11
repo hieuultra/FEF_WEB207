@@ -1,0 +1,11 @@
+<h2>ADD</h2>
+<form ng-submit="add()">
+  <label>NAME: </label>
+  <input type="text" ng-model="employees.name" />
+  <label for="">AGE</label>
+  <input type="number" ng-model="employees.age" ng-change="onChangeAge()" />
+  <label for="">JOB</label>
+  <input type="text" ng-model="employees.job" />
+  <button type="submit">ADD</button>
+</form>
+Thong bao: {{tBao}}

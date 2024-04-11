@@ -1,0 +1,26 @@
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  width: 400%;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #ced4da;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.search-input:hover {
+  background-color: #f8f9fa;
+  /* Màu nền khi di chuột qua */
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: rgba(0, 0, 0, 0.5);
+}

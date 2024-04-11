@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cao đẳng FPT POLYTECHNIC- ĐĂNG KÝ NHẬP HỌC</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      .square {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+      }
+      .btn-dark:hover {
+        background-color: #6610f2;
+        border-color: #6610f2;
+      }
+      .btn-lg {
+        padding: 1.25rem 2.5rem; /* Kích thước lớn hơn */
+      }
+      label.error {
+        color: red;
+        font-weight: lighter !important;
+      }
+      /* Định dạng background */
+      body {
+        /* background-image: url("./img/z5242321879733_423afae5210d6f17ff527112a73671c4.jpg"); */
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" method="post" id="demoForm">
+      <div class="container-fluid p-0 m-0">
+        <div>
+          <img
+            src="./img/z5233113974174_81dedd65bb58c417acf895b231341513.jpg"
+            class="img-fluid mb-5 w-100"
+            style="max-height: 80vh"
+          />
+          <h3 class="fs-1 fw-bold text-primary text-center">
+            PHIẾU ĐĂNG KÝ HỌC
+          </h3>
+        </div>
+      </div>
+
+      <div
+        class="container border border-2 border-gray p-4 rounded mt-5 shadow"
+      >
+        <h4
+          class="fw-bolder text-primary d-inline-flex align-items-center mt-3"
+        >
+          <span class="badge bg-warning me-2 square"> </span>
+          THÔNG TIN THÍ SINH
+        </h4>
+        <!-- ============== -->
+        <div class="row mt-4">
+          <div class="col">
+            <label for="" class="form-label fw-medium">Họ và tên </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Họ và tên "
+              id="hoten"
+              name="hoten"
+            />
+          </div>
+          <div class="col">
+            <label for="" class="form-label fw-medium">Ngày sinh </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="DD/MM/YYYY"
+              id="ngaysinh"
+              name="ngaysinh"
+            />
+          </div>
+          <div class="col">
+            <label for="" class="form-label fw-medium">Giới tính </label>
+            <select class="form-select form-select-medium">
+              <option value="1">Nam</option>
+              <option value="2">Nữ</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="" class="form-label fw-medium">Dân tộc </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Kinh"
+              id="dantoc"
+              name="dantoc"
+            />
+          </div>
+        </div>
+
+        <!-- ==================== -->
+        <div class="row mt-5">
+          <div class="col">
+            <label for="" class="form-label fw-medium"
+              >Số CCCD/Chứng minh nhân dân
+            </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="0123456789 "
+              id="cccd"
+              name="cccd"
+            />
+          </div>
+          <div class="col">
+            <label for="" class="form-label fw-medium">Ngày cấp </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="DD/MM/YYYY"
+              id="ngaycap"
+              name="ngaycap"
+            />
+          </div>
+          <div class="col">
+            <label for="" class="form-label fw-medium">Nơi cấp</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Hà Nội, Hồ Chí Minh..."
+              id="noicap"
+              name="noicap"
+            />
+          </div>
+        </div>
+
+        <!-- ============================ -->
+        <div class="row mt-5">
+          <label for="" class="form-label fw-bold"
+            >Nơi thường trú (Điền thông tin đầy đủ như trong CMND/CCCD)
+          </label>
+          <div class="col">
+            <select
+              class="form-select form-select-medium"
+              id="city"
+              name="city"
+            >
+              <option selected>Chọn tỉnh/thành phố</option>
+              <option value="1">Hà Nội</option>
+              <option value="2">Nam Định</option>
+              <option value="3">Cà Mau</option>
+              <option value="4">Thái Bình</option>
+              <option value="5">Lạng Sơn</option>
+            </select>
+          </div>
+          <div class="col">
+            <select
+              class="form-select form-select-medium"
+              id="quan"
+              name="quan"
+            >
+              <option selected>Quận/Huyện</option>
+              <option value="1">Hà Nội</option>
+              <option value="2">Hà Nam</option>
+            </select>
+          </div>
+          <div class="col">
+            <select class="form-select form-select-medium" id="xa" name="xa">
+              <option selected>Xã/Phường/Thị trấn</option>
+              <option value="1">Hà Nội</option>
+              <option value="2">Hà Nam</option>
+            </select>
+          </div>
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Số nhà, đường, ngõ xóm"
+              name="sonha"
+            />
+          </div>
+        </div>
+        <!-- ======================= -->
+        <div class="row mt-5">
+          <div class="col">
+            <label for="" class="form-label fw-medium"
+              >Số điện thoại thí sinh
+            </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="0941378974"
+              id="sdt"
+              name="sdt"
+            />
+          </div>
+          <div class="col">
+            <label for="" class="form-label fw-medium">Email thí sinh </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="example@fpt.edu.vn"
+              id="email"
+              name="email"
+            />
+          </div>
+          <div class="col">
+            <label for="" class="form-label fw-medium"
+              >Họ tên phụ huynh/người bảo trợ</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Họ và tên"
+              id="phuhuynh"
+              name="phuhuynh"
+            />
+          </div>
+          <div class="col">
+            <label for="" class="form-label fw-medium"
+              >Số điện thoại phụ huynh/người bảo trợ
+            </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="0544332424"
+              id="sdtph"
+              name="sdtph"
+            />
+          </div>
+        </div>
+
+        <!-- ====================== -->
+        <h4 class="fw-bold text-primary d-inline-flex align-items-center mt-5">
+          <span class="badge bg-warning me-2 square"> </span>
+          THÔNG TIN ĐĂNG KÝ TRƯỜNG CAO ĐẲNG FPT POLYTECHNIC
+        </h4>
+        <div class="row mt-4">
+          <div class="col">
+            <label for="" class="form-label fw-medium">Cơ sở nhập học </label>
+            <select
+              class="form-select form-select-medium"
+              style="max-width: 40vw"
+            >
+              <option value="1">Hà Nội</option>
+              <option value="2">Hà Nam</option>
+              <option value="3">Hà Tĩnh</option>
+              <option value="4">Thái Nguyên</option>
+              <option value="5">Cà Mau</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- ============================ -->
+        <div class="row mt-4">
+          <label for="" class="form-label fw-medium"
+            >Nguyện vọng thứ nhất
+          </label>
+          <div class="col">
+            <select class="form-select form-select-medium" id="nv" name="nv">
+              <option selected>Chuyên ngành</option>
+              <option value="1">Lập trình web</option>
+              <option value="2">Lập trình Mobile</option>
+              <option value="3">Thiết kế đồ họa</option>
+              <option value="4">Quản trị nhà hàng</option>
+            </select>
+          </div>
+          <div class="col">
+            <select class="form-select form-select-medium">
+              <option selected>Ngành</option>
+              <option value="1">Công nghệ thông tin</option>
+            </select>
+          </div>
+          <div class="col">
+            <select class="form-select form-select-medium">
+              <option selected>Chuyên ngành</option>
+              <option value="1">Lập trình web</option>
+              <option value="2">Lập trình Mobile</option>
+              <option value="3">Thiết kế đồ họa</option>
+              <option value="4">Quản trị nhà hàng</option>
+            </select>
+          </div>
+          <div class="col">
+            <select class="form-select form-select-medium">
+              <option selected>Ngành</option>
+              <option value="1">Công nghệ thông tin</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- ========================== -->
+        <div class="row mt-4">
+          <div class="col">
+            <label for="" class="form-label fw-medium"
+              >Năm tốt nghiệp THPT hoặc tương đương
+            </label>
+            <select class="form-select form-select-medium">
+              <option selected>2024</option>
+              <option value="1">2023</option>
+              <option value="2">2022</option>
+              <option value="3">2021</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="" class="form-label fw-medium"
+              >Trường tốt nghiệp THPT hoặc tương đương</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Trường"
+              id="thpt"
+              name="thpt"
+            />
+          </div>
+        </div>
+
+        <!-- ========================= -->
+        <div class="row mt-4">
+          <label for="" class="form-label fw-medium">Nơi tốt nghiệp </label>
+          <div class="col">
+            <select class="form-select form-select-medium" id="ntn" name="ntn">
+              <option selected>Chọn tỉnh/thành phố</option>
+              <option value="1">Hà Nội</option>
+              <option value="2">Nam Định</option>
+              <option value="3">Cà Mau</option>
+              <option value="4">Thái Bình</option>
+              <option value="5">Lạng Sơn</option>
+            </select>
+          </div>
+          <div class="col">
+            <select class="form-select form-select-medium" id="qh" name="qh">
+              <option selected>Quận/Huyện</option>
+              <option value="1">Hà Nội</option>
+              <option value="2">Hà Nam</option>
+            </select>
+          </div>
+          <div class="col">
+            <select class="form-select form-select-medium" id="x" name="x">
+              <option selected>Xã/Phường/Thị trấn</option>
+              <option value="1">Hà Nội</option>
+              <option value="2">Hà Nam</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- ============================== -->
+        <h4 class="fw-bold text-primary d-inline-flex align-items-center mt-5">
+          <span class="badge bg-warning me-2 square"> </span>
+          THÔNG TIN NHẬN GIẤY BÁO KẾT QUẢ
+        </h4>
+        <div class="row mt-4">
+          <label for="" class="form-label fw-medium">Người nhận </label>
+          <div class="col">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="nguoinhan"
+              id="thanhvien1"
+            />
+            <label class="form-check-label fw-lighter"> Thí sinh </label>
+          </div>
+          <div class="col">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="dctt"
+              id="dc1"
+            />
+            <label class="form-check-label fw-lighter"
+              >Địa chỉ thường trú</label
+            >
+          </div>
+        </div>
+        <div class="row mt-4 mb-4">
+          <div class="col">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="nguoinhan"
+              id="thanhvien2"
+            />
+            <label class="form-check-label fw-lighter">
+              Phụ huynh/Người bảo trợ
+            </label>
+          </div>
+          <div class="col">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="dctt"
+              id="dc2"
+            />
+            <label class="form-check-label fw-lighter">Khác</label>
+          </div>
+        </div>
+
+        <!-- =========================== -->
+        <h4 class="fw-bold text-primary d-inline-flex align-items-center mt-5">
+          <span class="badge bg-warning me-2 square"> </span>
+          TẢI LÊN GIẤY TỜ XÁC THỰC HỒ SƠ ĐĂNG KÝ HỌC
+        </h4>
+        <div class="row mt-4">
+          <div class="col">
+            <div>
+              <label for="" class="form-label fw-bold"
+                >Ảnh CMND/CCCD mặt trước </label
+              ><br />
+              <span class="fw-light">(bắt buộc)</span>
+            </div>
+            <img
+              src="./img/z5236713377771_580baba360ff0ea45d3941af5fead634.jpg"
+              class="img-fluid"
+              style="max-width: 350px"
+            />
+            <input type="file" class="mt-3" id="anhcccd" name="anhcccd" />
+          </div>
+          <div class="col">
+            <div>
+              <label for="" class="form-label fw-bold"
+                >Ảnh CMND/CCCD mặt sau </label
+              ><br />
+              <span class="fw-light">(bắt buộc)</span>
+            </div>
+            <img
+              src="./img/z5236713568650_0fdfa5265c2f710f77f1846a0a126370.jpg"
+              class="img-fluid"
+              style="max-width: 350px"
+            />
+            <input type="file" class="mt-3" name="anhcccdsau" id="anhcccdsau" />
+          </div>
+          <div class="col">
+            <label for="" class="form-label fw-bold"
+              >Bản sao công chứng Bằng tốt nghiệp THPT</label
+            ><br />
+            <span class="fw-light"
+              >Hoặc giấy chứng nhận tốt nghiệp tạm thời (không bắt buộc)</span
+            >
+            <img
+              src="./img/z5236713684041_5336ca9d3fc21f036d843376b1975a90.jpg"
+              class="img-fluid w-100"
+              style="max-height: 220px"
+            />
+            <input type="file" class="mt-3" />
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col">
+            <input type="checkbox" id="camdoan" name="camdoan" />
+            <span class="fw-lighter"
+              >Tôi xin cam đoan những lời khai của tôi trên phiếu đăng ký này là
+              đúng sự thật. Nếu sai tôi <br />hoàn toàn chịu trách nhiệm và nhận
+              xử lý theo Quy chế tuyển sinh cao đẳng hiện hành</span
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input type="checkbox" id="camket" name="camket" />
+            <span class="fw-lighter"
+              >Tôi đã đọc kỹ và cam kết tuân thủ Quy định tài chính của nhà
+              trường</span
+            >
+          </div>
+        </div>
+
+        <!-- =================== -->
+        <div class="container d-flex justify-content-center mt-5 mb-5">
+          <button type="submit" class="btn btn-dark btn-lg rounded-0">
+            GỬI HỒ SƠ ĐĂNG KÝ
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script
+      src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="asm1.js"></script>
+  </body>
+</html>

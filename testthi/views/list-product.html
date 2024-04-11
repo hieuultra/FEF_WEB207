@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3 style="text-align: left" class="mt-5 mb-5">DANH SACH SAN PHAM</h3>
+      <div class="d-flex justify-content-end mb-3">
+        <a href="#!/products/add" class="btn btn-success">+ THEM SAN PHAM</a>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>MA_SP</th>
+            <th>TEN</th>
+            <th>LOAI</th>
+            <th>GIA</th>
+            <th>ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="p in product">
+            <td>{{$index+1}}</td>
+            <td>{{p.ma_sp}}</td>
+            <td>{{p.ten}}</td>
+            <td>{{p.loai}}</td>
+            <td>{{p.gia}}</td>
+            <td>
+              <button ng-click="onDetail(p.id)" class="btn btn-primary">
+                DETAIL
+              </button>
+              <button ng-click="onDelete(p.id)" class="btn btn-danger">
+                DELETE
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

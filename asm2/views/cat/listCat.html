@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Dashboard - SB Admin - ASM2</title>
+</head>
+
+<body class="sb-nav-fixed">
+  <!-- header -->
+  <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary" style="height: 70px;">
+    <!-- Navbar Brand-->
+    <a class="navbar-brand ps-3">
+      <i class="fas fa-check-circle checkmark-icon"></i>
+      <span class="fw-lighter">Let</span><span class="fw-medium fs-4">Start</span>
+    </a>
+    <!-- Sidebar Toggle-->
+    <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="search-container">
+      <input type="text" class="btn btn-light btn-sm search-input" placeholder="Search something special">
+      <i class="fas fa-search search-icon"></i>
+    </div>
+
+    <!-- Account -->
+    <ul class="navbar-nav d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false"><i class="fa-regular fa-envelope"></i> <i class="fas fa-bell"></i></a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#!">Settings</a></li>
+          <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+          <li><a class="dropdown-item" href="">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!-- endheader -->
+
+
+  <div id="layoutSidenav">
+    <!-- leftmenu -->
+    <div id="layoutSidenav_nav">
+      <nav class="sb-sidenav accordion sb-sidenav" id="sidenavAccordion">
+        <div class="sb-sidenav-menu">
+          <div class="nav">
+            <div class="sb-sidenav-menu-heading text-primary">Navigation</div>
+            <a class="nav-link text-dark" href="/asm2/index.html">
+              <div class="sb-nav-link-icon">
+                <i class="fas fa-tachometer-alt"></i>
+              </div>
+              Dashboard
+            </a>
+            <!--  -->
+            <div class="sb-sidenav-menu-heading text-primary">Components</div>
+            <!-- Category -->
+            <a class="nav-link collapsed text-dark" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCate"
+              aria-expanded="false" aria-controls="collapseLayouts">
+              <div class="sb-nav-link-icon">
+                <i class="fas fa-columns"></i>
+              </div>
+              Category
+              <div class="sb-sidenav-collapse-arrow">
+                <i class="fas fa-angle-down"></i>
+              </div>
+            </a>
+
+            <div class="collapse" id="collapseCate" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+              <nav class="sb-sidenav-menu-nested nav">
+                <a class="nav-link text-dark" href="#!/cat/listCat">List categories</a>
+                <a class="nav-link text-dark" href="#!/cat/addCat">Add categories</a>
+              </nav>
+            </div>
+
+            <!-- Product -->
+            <a class="nav-link collapsed text-dark" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProduct"
+              aria-expanded="false" aria-controls="collapseLayouts">
+              <div class="sb-nav-link-icon">
+                <i class="fas fa-columns"></i>
+              </div>
+              Product
+              <div class="sb-sidenav-collapse-arrow">
+                <i class="fas fa-angle-down"></i>
+              </div>
+            </a>
+
+            <div class="collapse" id="collapseProduct" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+              <nav class="sb-sidenav-menu-nested nav">
+                <a class="nav-link text-dark" href="#!/pro/listPro">List product</a>
+                <a class="nav-link text-dark" href="#!/pro/addPro">Add product</a>
+              </nav>
+            </div>
+          </div>
+      </nav>
+    </div>
+    <!-- endleftmenu -->
+    <!-- Right menu -->
+    <div id="layoutSidenav_content">
+      <main>
+        <div class="container-fluid px-4">
+          <h1 class="mt-4">List categories</h1>
+          <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item active">Dashboard</li>
+          </ol>
+
+          <!-- Data -->
+          <div class="card mb-4">
+            <div class="card-header">
+              <i class="fas fa-table me-1"></i>
+              List categories
+            </div>
+            <div class="card-body">
+              <table id="datatablesSimple" class="table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Category name</th>
+                    <!-- <th>Image</th> -->
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="c in cat">
+                    <td>{{$index+1}}</td>
+                    <td>{{c.name_cat}}</td>
+                    <!-- <td><img src="{{c.image}}" width="60px"></td> -->
+                    <td>
+                      <div class="actions">
+                        <button
+                          ng-click="onDelete(c.id)"
+                          class="btn btn-danger details-button"
+                        >
+                          Delete
+                        </button>
+                        <button
+                          ng-click="onEdit(c.id)"
+                          type="button"
+                          class="btn btn-warning"
+                        >
+                          Update
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="text-right add-button">
+                <a href="#!/cat/addCat" class="btn btn-success" role="button">ADD</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- endrightmenu -->
+      <!-- Footer -->
+      <footer class="py-4 bg-light mt-auto">
+        <div class="container-fluid px-4">
+          <div class="d-flex align-items-center justify-content-between small">
+            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+            <div>
+              <a href="#">Privacy Policy</a>
+              &middot;
+              <a href="#">Terms &amp; Conditions</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- endfooter -->
+    </div>
+  </div>
+</body>
+
+</html>

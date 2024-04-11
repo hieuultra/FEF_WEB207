@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test_thi</title>
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/angular-route.min.js"></script>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="libs/bootstrap/js/bootstrap.bundle.min.js" />
+    <script src="controller/listProController.js"></script>
+    <script src="controller/addProController.js"></script>
+    <script src="controller/detailProController.js"></script>
+    <script src="controller/editProController.js"></script>
+  </head>
+  <body>
+    <div ng-app="app-route">
+      <div class="container-fluid bg-warning p-4">
+        <div class="d-flex justify-content-between">
+          <a href="#!/products/list-product">Trang Chu</a>
+          <form class="d-flex justify-content-end" role="search">
+            <input
+              class="form-control me-2 w-100"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+      <main>
+        <div ng-view></div>
+      </main>
+    </div>
+
+    <script type="text/javascript">
+      angular
+        .module("app-route", ["ngRoute"])
+        .config(function ($routeProvider) {
+          $routeProvider
+            .when("/products/list-product", {
+              templateUrl: "views/list-product.html",
+              controller: listProController,
+            })
+            .when("/products/add", {
+              templateUrl: "views/add.html",
+              controller: addProController,
+            })
+            .when("/products/detail/:id", {
+              templateUrl: "views/detail.html",
+              controller: detailProController,
+            })
+            .when("/products/edit/:id",{
+              templateUrl: "views/edit.html",
+              controller: editProController,
+            })
+        });
+    </script>
+  </body>
+</html>
