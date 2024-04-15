@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>testhi2</title>
+    <script src="./libs/angular.min.js"></script>
+    <script src="./libs/angular-route.min.js"></script>
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./libs/bootstrap/js/bootstrap.bundle.min.js" />
+    <script src="controller/listProController.js"></script>
+    <script src="controller/addProController.js"></script>
+    <script src="controller/detailProController.js"></script>
+    <script src="controller/editProController.js"></script>
+  </head>
+  <body>
+    <div ng-app="app-route">
+      <div class="container-fluid bg-secondary p-4">
+        <div class="d-flex justify-content-between">
+          <a href="#!/products/list">HOME</a>
+          <form class="d-flex justify-content-end">
+            <input
+              type="search"
+              class="form-control me-2 w-100"
+              placeholder="Search"
+            />
+            <button class="btn btn-outline-danger" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+      <main>
+        <div ng-view></div>
+      </main>
+    </div>
+    <script>
+      angular
+        .module("app-route", ["ngRoute"])
+        .config(function ($routeProvider) {
+          $routeProvider
+            .when("/products/list", {
+              templateUrl: "views/list.html",
+              controller: listProController,
+            })
+            .when("/products/add", {
+              templateUrl: "views/add.html",
+              controller: addProController,
+            })
+            .when("/products/detail/:id", {
+              templateUrl: "views/detail.html",
+              controller: detailProController,
+            })
+            .when("/products/edit/:id", {
+              templateUrl: "views/edit.html",
+              controller: editProController,
+            })
+            .otherwise({
+              redirectTo: "/products/list",
+            });
+        });
+    </script>
+  </body>
+</html>

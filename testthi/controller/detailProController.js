@@ -10,7 +10,7 @@ window.detailProController = function ($scope, $http, $routeParams, $location) {
     });
   };
   $scope.getData();
-  
+
   $scope.detail = function () {
     $http.get(`${apiUrl}/${detailId}`).then(function (response) {
       if (response.status === 200) {

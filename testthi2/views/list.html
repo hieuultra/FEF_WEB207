@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="mt-5 mb-5" style="text-align: center">LIST PRO</h2>
+      <div class="d-flex justify-content-end mb-3">
+        <a href="#!/products/add" class="btn btn-success">+ ADD PRO</a>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>BRAND</th>
+            <th>PRICE</th>
+            <th>ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="p in pro">
+            <td>{{$index+1}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.brand}}</td>
+            <td>{{p.price}}</td>
+            <td>
+              <button ng-click="onDetail(p.id)" class="btn btn-primary">
+                DETAIL
+              </button>
+              <button ng-click="onDelete(p.id)" class="btn btn-danger">
+                DELETE
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

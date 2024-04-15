@@ -49,7 +49,8 @@
           <span ng-show="check.gia == true" style="color: red">
             <span ng-show="!inputValue.gia">vui lòng nhập giá và</span>
             <span
-              ng-show="inputValue.gia && (inputValue.gia <= 100 || !/^\d+$/.test(inputValue.gia))"
+              ng-show="inputValue.gia && 
+              (inputValue.gia <= 100 || !/^\d+$/.test(inputValue.gia))"
               >Giá phải là số nguyên dương lớn hơn 100</span
             >
           </span>

@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 style="text-align: center" class="mt-5 mb-5">ADD SAN PHAM</h2>
+      <form class="">
+        <div class="form-group">
+          <label for="">NAME</label>
+          <input
+            type="text"
+            class="form-control"
+            ng-model="inputValue.name"
+            required
+          />
+          <span ng-show="check.name == true" style="color: red"
+            >VUI LONG NHAP TEN</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="">BRAND</label>
+          <select class="form-select" ng-model="inputValue.brand" required>
+            <option value="" selected>Please choose</option>
+            <option value="sp">SP</option>
+            <option value="top">TOP</option>
+          </select>
+          <span ng-show="check.brand == true" style="color: red"
+            >VUI LONG CHON BRAND</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="">PRICE</label>
+          <input
+            type="text"
+            class="form-control"
+            ng-model="inputValue.price"
+            required
+          />
+          <span ng-show="check.price == true" style="color: red">
+            <span ng-show="!inputValue.price">VUI LONG NHAP GIA VA</span>
+            <span
+              ng-show="inputValue.price &&
+             (inputValue.price <= 100 || !/^\d+$/.test(inputValue.price))"
+              >Gia phai la so nguyen duong va lon hon 100</span
+            >
+          </span>
+        </div>
+        <center>
+          <button type="reset" class="btn btn-outline-primary mt-3">
+            RESET
+          </button>
+          <button ng-click="add()" class="btn btn-success mt-3">ADD</button>
+        </center>
+      </form>
+    </div>
+  </div>
+</div>
